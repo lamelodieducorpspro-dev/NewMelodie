@@ -1,3 +1,13 @@
 import MentionsLegales from "@/components/pages/MentionsLegales";
-export const metadata = { title: "Mentions légales · La Mélodie du Corps" };
-export default function Page() { return <MentionsLegales />; }
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Mentions légales",
+  description:
+    "Mentions légales du site lamelodieducorps.com : éditeur, hébergeur, propriété intellectuelle.",
+  path: "/mentions-legales",
+});
+
+export default function Page() {
+  return <MentionsLegales />;
+}

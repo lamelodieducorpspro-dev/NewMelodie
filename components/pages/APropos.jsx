@@ -151,7 +151,7 @@ export default function APropos() {
             <Link href="/contact" className="btn-primary" data-testid="apropos-cta-primary">
               Réserver mon appel découverte <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/accompagnement" className="btn-secondary">Découvrir mon accompagnement</Link>
+            <Link href="/mon-accompagnement" className="btn-secondary">Découvrir mon accompagnement</Link>
           </div>
         </div>
       </section>

@@ -26,11 +26,11 @@ const pillars = [
 ];
 
 const specialties = [
-  { tag: "SOPK", title: "SOPK", img: IMG.sopk, to: "/specialites/sopk",
+  { tag: "SOPK", title: "SOPK", img: IMG.sopk, to: "/sopk-alimentation-guadeloupe",
     desc: "Cycles irréguliers, fatigue, fringales, acné, prise de poids... L'alimentation est l'un des leviers les plus puissants pour soutenir ton équilibre hormonal naturellement." },
-  { tag: "Endométriose", title: "Endométriose", img: IMG.endo, to: "/specialites/endometriose",
+  { tag: "Endométriose", title: "Endométriose", img: IMG.endo, to: "/endometriose-alimentation-guadeloupe",
     desc: "Douleurs chroniques, inflammation, troubles digestifs, fatigue profonde... Une approche holistique peut considérablement améliorer ton confort au quotidien." },
-  { tag: "Ménopause", title: "Ménopause & périménopause", img: IMG.menopause, to: "/specialites/menopause",
+  { tag: "Ménopause", title: "Ménopause & périménopause", img: IMG.menopause, to: "/menopause-alimentation-guadeloupe",
     desc: "Bouffées de chaleur, prise de poids, fatigue, humeur... Cette transition mérite un accompagnement doux, personnalisé et naturel." },
 ];
 
@@ -77,7 +77,7 @@ export default function Home() {
               <Link href="/contact" data-testid="hero-cta-primary" className="btn-primary">
                 Réserver mon appel découverte gratuit <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="/accompagnement" data-testid="hero-cta-secondary" className="btn-secondary">
+              <Link href="/mon-accompagnement" data-testid="hero-cta-secondary" className="btn-secondary">
                 Découvrir mon accompagnement
               </Link>
             </div>

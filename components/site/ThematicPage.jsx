@@ -16,7 +16,7 @@ export default function ThematicPage({ title, heroImg, intro, h2, what, lien, le
               <Link href="/contact" className="btn-primary" data-testid="thematic-cta-hero">
                 Réserver mon appel découverte <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="/accompagnement" className="btn-secondary">Mon accompagnement</Link>
+              <Link href="/mon-accompagnement" className="btn-secondary">Mon accompagnement</Link>
             </div>
           </div>
           <div className="lg:col-span-5">

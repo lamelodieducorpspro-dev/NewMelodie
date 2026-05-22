@@ -11,13 +11,13 @@ const navItems = [
   {
     label: "Mes spécialités",
     children: [
-      { label: "SOPK", to: "/specialites/sopk" },
-      { label: "Endométriose", to: "/specialites/endometriose" },
-      { label: "Ménopause", to: "/specialites/menopause" },
+      { label: "SOPK", to: "/sopk-alimentation-guadeloupe" },
+      { label: "Endométriose", to: "/endometriose-alimentation-guadeloupe" },
+      { label: "Ménopause", to: "/menopause-alimentation-guadeloupe" },
     ],
   },
-  { label: "Mon accompagnement", to: "/accompagnement" },
-  { label: "Yoga", to: "/yoga" },
+  { label: "Mon accompagnement", to: "/mon-accompagnement" },
+  { label: "Yoga", to: "/cours-yoga-bouillante-guadeloupe" },
   { label: "Tarifs", to: "/tarifs" },
   { label: "FAQ", to: "/faq" },
   { label: "À propos", to: "/a-propos" },

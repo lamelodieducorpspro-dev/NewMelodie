@@ -10,7 +10,7 @@ export default function SOPK() {
       <SEO
         title="SOPK et alimentation : équilibre hormonal naturel · Guadeloupe"
         description="Accompagnement en nutrition holistique pour mieux vivre le SOPK : cycle irrégulier, fatigue, fringales, inflammation. Consultations à Bouillante et à distance."
-        canonical="https://www.lamelodieducorps.com/specialites/sopk"
+        canonical="https://www.lamelodieducorps.com/sopk-alimentation-guadeloupe"
       />
       <ThematicPage
       title="SOPK et alimentation : soutenir son équilibre hormonal naturellement"

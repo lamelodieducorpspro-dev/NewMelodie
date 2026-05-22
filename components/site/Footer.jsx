@@ -37,8 +37,8 @@ export default function Footer() {
           <h4 className="text-white font-serif text-xl mb-4">Navigation</h4>
           <ul className="space-y-2 text-sm text-[#D5C8B5]">
             <li><Link href="/" className="hover:text-white">Accueil</Link></li>
-            <li><Link href="/accompagnement" className="hover:text-white">Accompagnement</Link></li>
-            <li><Link href="/yoga" className="hover:text-white">Yoga</Link></li>
+            <li><Link href="/mon-accompagnement" className="hover:text-white">Accompagnement</Link></li>
+            <li><Link href="/cours-yoga-bouillante-guadeloupe" className="hover:text-white">Yoga</Link></li>
             <li><Link href="/tarifs" className="hover:text-white">Tarifs</Link></li>
             <li><Link href="/a-propos" className="hover:text-white">À propos</Link></li>
             <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
@@ -49,11 +49,11 @@ export default function Footer() {
         <div className="md:col-span-2">
           <h4 className="text-white font-serif text-xl mb-4">Spécialités</h4>
           <ul className="space-y-2 text-sm text-[#D5C8B5]">
-            <li><Link href="/specialites/sopk" className="hover:text-white">SOPK</Link></li>
-            <li><Link href="/specialites/endometriose" className="hover:text-white">Endométriose</Link></li>
-            <li><Link href="/specialites/menopause" className="hover:text-white">Ménopause</Link></li>
-            <li><Link href="/accompagnement" className="hover:text-white">Fatigue chronique</Link></li>
-            <li><Link href="/accompagnement" className="hover:text-white">Digestion</Link></li>
+            <li><Link href="/sopk-alimentation-guadeloupe" className="hover:text-white">SOPK</Link></li>
+            <li><Link href="/endometriose-alimentation-guadeloupe" className="hover:text-white">Endométriose</Link></li>
+            <li><Link href="/menopause-alimentation-guadeloupe" className="hover:text-white">Ménopause</Link></li>
+            <li><Link href="/mon-accompagnement" className="hover:text-white">Fatigue chronique</Link></li>
+            <li><Link href="/mon-accompagnement" className="hover:text-white">Digestion</Link></li>
           </ul>
         </div>
 

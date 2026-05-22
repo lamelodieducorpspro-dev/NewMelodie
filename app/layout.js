@@ -1,18 +1,55 @@
 import "./globals.css";
 import Layout from "@/components/site/Layout";
+import StructuredData from "@/components/site/StructuredData";
+import { localBusinessJsonLd, websiteJsonLd, SITE_BASE_URL, OG_IMAGE } from "@/lib/seo";
 
 export const metadata = {
-  title: "La Mélodie du Corps · Nutrition Holistique & Santé Féminine · Guadeloupe",
+  metadataBase: new URL(SITE_BASE_URL),
+  title: {
+    default:
+      "La Mélodie du Corps · Nutrition Holistique & Santé Féminine à Bouillante, Guadeloupe",
+    template: "%s · La Mélodie du Corps",
+  },
   description:
-    "Apolline accompagne les femmes en nutrition holistique et santé hormonale féminine à Bouillante, Guadeloupe et à distance. SOPK, endométriose, ménopause, fatigue.",
-  metadataBase: new URL("https://www.lamelodieducorps.com"),
+    "Apolline accompagne les femmes en nutrition holistique et santé féminine à Bouillante et à distance. SOPK, endométriose, ménopause, fatigue. Appel découverte gratuit.",
+  applicationName: "La Mélodie du Corps",
+  authors: [{ name: "Apolline Maysounabe", url: SITE_BASE_URL }],
+  creator: "Apolline Maysounabe",
+  publisher: "La Mélodie du Corps",
+  alternates: { canonical: SITE_BASE_URL },
   openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: SITE_BASE_URL,
+    siteName: "La Mélodie du Corps",
     title: "La Mélodie du Corps · Nutrition Holistique & Santé Féminine",
     description:
       "Accompagnement en nutrition holistique et santé hormonale féminine — Guadeloupe & visio.",
-    locale: "fr_FR",
-    type: "website",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "La Mélodie du Corps — Apolline" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "La Mélodie du Corps · Nutrition Holistique & Santé Féminine",
+    description:
+      "Accompagnement en nutrition holistique et santé hormonale féminine — Guadeloupe & visio.",
+    images: [OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
+  icons: {
+    icon: "https://static.wixstatic.com/media/164c4f_f1f03cef1d5b40ba8a7ba0285a4cfc56~mv2.png",
+    apple: "https://static.wixstatic.com/media/164c4f_f1f03cef1d5b40ba8a7ba0285a4cfc56~mv2.png",
+  },
+  formatDetection: { email: false, telephone: false, address: false },
+};
+
+export const viewport = {
+  themeColor: "#2C4A3B",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
@@ -25,6 +62,8 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        <StructuredData id="jsonld-localbusiness" data={localBusinessJsonLd} />
+        <StructuredData id="jsonld-website" data={websiteJsonLd} />
       </head>
       <body className="bg-cream text-[#1A2421] font-sans antialiased">
         <Layout>{children}</Layout>
