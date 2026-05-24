@@ -39,7 +39,11 @@ const nextConfig = {
   output: "standalone",
   poweredByHeader: false,
   compress: true,
+  // Ensure /public/ assets are served as-is in standalone deployment.
+  // next/image optimizer requires the public folder + server runtime,
+  // which is not guaranteed in all deploy targets. unoptimized = safe default.
   images: {
+    unoptimized: true,
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000, // 1 year
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
