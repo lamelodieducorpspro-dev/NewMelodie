@@ -1,14 +1,32 @@
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 
+// Build the base metadata (canonical, OG, etc.) then HARDEN it for 404:
+// - robots noindex,nofollow (so 404s never get indexed)
+// - drop canonical to avoid Google merging the 404 into a real page
+const base = buildMetadata({
+  title: "Page introuvable · 404",
+  description:
+    "La page que vous cherchez n'existe pas ou a été déplacée. Retournez à l'accueil de La Mélodie du Corps.",
+  path: "/404",
+});
+
 export const metadata = {
-  ...buildMetadata({
-    title: "Page introuvable · 404",
-    description:
-      "La page que vous cherchez n'existe pas ou a été déplacée. Retournez à l'accueil de La Mélodie du Corps.",
-    path: "/404",
-  }),
-  robots: { index: false, follow: false },
+  ...base,
+  alternates: undefined, // ⚠️ no canonical on 404
+  openGraph: { ...base.openGraph, url: undefined },
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      "max-snippet": -1,
+      "max-image-preview": "none",
+    },
+  },
 };
 
 export default function NotFound() {
