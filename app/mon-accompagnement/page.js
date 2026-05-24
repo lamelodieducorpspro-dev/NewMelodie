@@ -7,7 +7,6 @@ export const metadata = buildMetadata({
   description:
     "Un suivi personnalisé sur 3 à 4 mois pour mieux comprendre votre corps, soutenir votre équilibre hormonal et digestif. Cabinet à Bouillante, domicile ou visio.",
   path: "/mon-accompagnement",
-  type: "article",
   keywords: [
     "accompagnement nutrition",
     "santé hormonale féminine",

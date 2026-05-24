@@ -8,7 +8,6 @@ export const metadata = buildMetadata({
   description:
     "Accompagnement holistique pour mieux vivre l'endométriose : alimentation anti-inflammatoire, digestion, fatigue chronique. Consultations à Bouillante et à distance.",
   path: "/endometriose-alimentation-guadeloupe",
-  type: "article",
   keywords: [
     "endométriose",
     "alimentation anti-inflammatoire",

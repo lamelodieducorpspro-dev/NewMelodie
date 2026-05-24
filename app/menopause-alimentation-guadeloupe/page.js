@@ -8,7 +8,6 @@ export const metadata = buildMetadata({
   description:
     "Accompagnement en nutrition holistique pour mieux vivre la ménopause et la périménopause. Bouffées de chaleur, fatigue, prise de poids. Bouillante, Guadeloupe et visio.",
   path: "/menopause-alimentation-guadeloupe",
-  type: "article",
   keywords: [
     "ménopause",
     "périménopause",

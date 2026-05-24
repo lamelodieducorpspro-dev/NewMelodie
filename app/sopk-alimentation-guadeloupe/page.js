@@ -8,7 +8,6 @@ export const metadata = buildMetadata({
   description:
     "Accompagnement en nutrition holistique pour mieux vivre le SOPK : cycle irrégulier, fatigue, fringales, inflammation. Consultations à Bouillante, Guadeloupe et à distance.",
   path: "/sopk-alimentation-guadeloupe",
-  type: "article",
   keywords: [
     "SOPK",
     "alimentation",
