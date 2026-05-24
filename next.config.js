@@ -39,22 +39,20 @@ const nextConfig = {
   output: "standalone",
   poweredByHeader: false,
   compress: true,
-  // Ensure /public/ assets are served as-is in standalone deployment.
-  // next/image optimizer requires the public folder + server runtime,
-  // which is not guaranteed in all deploy targets. unoptimized = safe default.
+  // Images are all self-hosted under /public/images/ — no remote optimisation needed.
+  // unoptimized = true ensures images are served as direct static files,
+  // which works reliably with the standalone build output.
   images: {
     unoptimized: true,
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000, // 1 year
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Allow Elfsight CDN for the Google Reviews widget assets only.
     remotePatterns: [
-      { protocol: "https", hostname: "static.wixstatic.com" },
-      { protocol: "https", hostname: "customer-assets.emergentagent.com" },
-      { protocol: "https", hostname: "www.lamelodieducorps.com" },
-      { protocol: "https", hostname: "lamelodieducorps.com" },
       { protocol: "https", hostname: "elfsightcdn.com" },
       { protocol: "https", hostname: "static.elfsight.com" },
+      { protocol: "https", hostname: "lh3.googleusercontent.com" }, // Google profile pictures shown in Elfsight reviews
     ],
   },
   experimental: {

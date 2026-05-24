@@ -40,8 +40,9 @@ export const metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   icons: {
-    icon: "https://static.wixstatic.com/media/164c4f_f1f03cef1d5b40ba8a7ba0285a4cfc56~mv2.png",
-    apple: "https://static.wixstatic.com/media/164c4f_f1f03cef1d5b40ba8a7ba0285a4cfc56~mv2.png",
+    icon: "/images/logo-melodie-du-corps.png",
+    apple: "/images/logo-melodie-du-corps.png",
+    shortcut: "/images/logo-melodie-du-corps.png",
   },
   formatDetection: { email: false, telephone: false, address: false },
 };
