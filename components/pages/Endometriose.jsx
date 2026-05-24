@@ -15,6 +15,7 @@ export default function Endometriose() {
       <ThematicPage
       title="Endométriose et alimentation : accompagner son corps avec douceur"
       heroImg={IMG.endo}
+      heroAlt="Endométriose et alimentation anti-inflammatoire : accompagnement holistique par Apolline à Bouillante, Guadeloupe"
       intro="Vivre avec l'endométriose, c'est composer avec fatigue profonde, troubles digestifs chroniques, inflammation, douleurs imprévisibles, charge mentale. Mon accompagnement ne remplace pas un suivi médical — il vient en complément, pour t'aider à soutenir ton corps et retrouver plus de confort au quotidien."
       h2="Les symptômes que tu vis peut-être"
       what={{

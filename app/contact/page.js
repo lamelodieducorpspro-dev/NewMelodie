@@ -5,7 +5,7 @@ export const metadata = buildMetadata({
   title:
     "Prendre rendez-vous · Appel découverte gratuit · Bouillante, Guadeloupe",
   description:
-    "Réserve ton appel découverte gratuit de 30 min avec Apolline. Consultations en cabinet à Bouillante, à domicile Côte-sous-le-Vent ou en visio France entière.",
+    "Réserve ton appel découverte gratuit de 15 min avec Apolline. Consultations en cabinet à Bouillante, à domicile Côte-sous-le-Vent ou en visio France entière.",
   path: "/contact",
   keywords: [
     "prendre rendez-vous",

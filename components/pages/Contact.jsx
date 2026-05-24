@@ -36,7 +36,7 @@ export default function Contact() {
     <>
       <SEO
         title="Prendre rendez-vous · Appel découverte gratuit · Bouillante, Guadeloupe"
-        description="Réserve ton appel découverte gratuit de 30 min avec Apolline. Consultations en cabinet à Bouillante, à domicile Côte-sous-le-Vent ou en visio France entière."
+        description="Réserve ton appel découverte gratuit de 15 min avec Apolline. Consultations en cabinet à Bouillante, à domicile Côte-sous-le-Vent ou en visio France entière."
         canonical="https://www.lamelodieducorps.com/contact"
       />
 
@@ -48,7 +48,7 @@ export default function Contact() {
           </h1>
           <p className="text-lg text-[#4A5D54] leading-relaxed">
             Réserve directement ta séance en ligne, ou écris-moi via le formulaire.
-            L'appel découverte de 30 minutes est offert et sans engagement.
+            L'appel découverte de 15 minutes est offert et sans engagement.
           </p>
         </div>
       </section>

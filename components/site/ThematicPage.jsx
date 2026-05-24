@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Check, MapPin, Phone, Laptop } from "lucide-react";
 
-export default function ThematicPage({ title, heroImg, intro, h2, what, lien, levers, work, faq }) {
+export default function ThematicPage({ title, heroImg, heroAlt, intro, h2, what, lien, levers, work, faq }) {
   return (
     <>
       <section className="pt-32 pb-16 md:pt-44 md:pb-24" data-testid="thematic-hero">
@@ -20,7 +21,17 @@ export default function ThematicPage({ title, heroImg, intro, h2, what, lien, le
             </div>
           </div>
           <div className="lg:col-span-5">
-            <img src={heroImg} alt="" className="w-full rounded-[2rem] object-cover aspect-square" />
+            <div className="relative aspect-square w-full overflow-hidden rounded-[2rem]">
+              <Image
+                src={heroImg}
+                alt={heroAlt || title}
+                fill
+                priority
+                quality={85}
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>

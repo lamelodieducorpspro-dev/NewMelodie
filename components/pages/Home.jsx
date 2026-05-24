@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Star, ArrowRight, Sparkles, Heart, Moon, Brain, Eye, Leaf, MapPin, Phone, Laptop } from "lucide-react";
 import { IMG, TESTIMONIALS, WHATSAPP_LINK, WHATSAPP_DISPLAY, ADDRESS, GOOGLE_REVIEWS } from "@/lib/constants";
 import SEO from "@/components/site/SEO";
+import ElfsightWidget from "@/components/site/ElfsightWidget";
 
 const symptoms = [
   "Ballonnements ou troubles digestifs fréquents",
@@ -51,12 +53,40 @@ export default function Home() {
       {/* HERO */}
       <section data-testid="hero-section" className="relative pt-28 pb-16 md:pt-44 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={IMG.hero} alt="" className="w-full h-full object-cover opacity-25" />
+          <Image
+            src={IMG.hero}
+            alt=""
+            fill
+            priority
+            quality={75}
+            sizes="100vw"
+            className="object-cover opacity-25"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-cream via-cream/80 to-cream" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 fade-in-up">
+            {/* Mobile-only hero portrait */}
+            <div className="lg:hidden relative mb-8 mx-auto max-w-sm">
+              <Image
+                src={IMG.life2}
+                alt="Apolline Maysounabe, praticienne en nutrition holistique à Bouillante, Guadeloupe, souriante devant la mer des Caraïbes"
+                width={400}
+                height={500}
+                priority
+                quality={85}
+                sizes="(max-width: 768px) 80vw, 400px"
+                className="w-full rounded-[2rem] object-cover shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
+              />
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-xl border border-[#E2DCD0]">
+                <div className="flex items-center gap-1 mb-1">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-terracotta text-terracotta" />)}
+                </div>
+                <p className="text-xs text-[#1A2421] font-medium">7 avis · 5/5 sur Google</p>
+              </div>
+            </div>
+
             <p className="overline mb-5">Praticienne en nutrition holistique · Guadeloupe</p>
             <h1 className="font-serif text-[2.5rem] sm:text-5xl md:text-7xl text-forest leading-[1.05] mb-6">
               Nutrition holistique<br />
@@ -85,7 +115,16 @@ export default function Home() {
 
           <div className="lg:col-span-5 relative hidden lg:block">
             <div className="relative">
-              <img src={IMG.life2} alt="Apolline Maysounabe, praticienne en nutrition holistique à Bouillante, Guadeloupe" loading="lazy" decoding="async" className="w-full rounded-[2rem] object-cover shadow-[0_30px_80px_rgba(0,0,0,0.12)]" />
+              <Image
+                src={IMG.life2}
+                alt="Apolline Maysounabe, praticienne en nutrition holistique à Bouillante, Guadeloupe"
+                width={560}
+                height={700}
+                priority
+                quality={85}
+                sizes="(min-width: 1024px) 40vw, 0vw"
+                className="w-full rounded-[2rem] object-cover shadow-[0_30px_80px_rgba(0,0,0,0.12)]"
+              />
               <div className="absolute -bottom-8 -left-8 bg-white rounded-2xl p-5 shadow-xl border border-[#E2DCD0] w-64">
                 <div className="flex items-center gap-1 mb-2">
                   {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-terracotta text-terracotta" />)}
@@ -140,8 +179,16 @@ export default function Home() {
             {specialties.map((sp) => (
               <Link key={sp.tag} href={sp.to} data-testid={`specialty-card-${sp.tag.toLowerCase()}`}
                 className="group block bg-white rounded-[2rem] overflow-hidden border border-[#E2DCD0] hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,0,0,0.1)] transition-all duration-500">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={sp.img} alt={`${sp.title} en Guadeloupe — accompagnement nutrition holistique par Apolline Maysounabe à Bouillante`} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="aspect-[4/3] overflow-hidden relative">
+                  <Image
+                    src={sp.img}
+                    alt={`${sp.title} en Guadeloupe — accompagnement nutrition holistique par Apolline Maysounabe à Bouillante`}
+                    fill
+                    quality={85}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 380px"
+                    loading="lazy"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
                 <div className="p-8">
                   <p className="overline mb-3">{sp.tag}</p>
@@ -224,7 +271,16 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-cream-2" data-testid="about-section">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5">
-            <img src={IMG.about} alt="Apolline, praticienne nutrition holistique et professeure de yoga en Guadeloupe" loading="lazy" decoding="async" className="w-full rounded-[2rem] object-cover" />
+            <Image
+              src={IMG.about}
+              alt="Apolline Maysounabe, praticienne en nutrition holistique et professeure de yoga en Guadeloupe, dans un moment de connexion avec la nature"
+              width={560}
+              height={700}
+              quality={85}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="w-full rounded-[2rem] object-cover"
+            />
           </div>
           <div className="md:col-span-7">
             <p className="overline mb-5">Qui je suis</p>
@@ -269,11 +325,7 @@ export default function Home() {
           </div>
 
           {/* Elfsight Google Reviews widget */}
-          <div
-            className="elfsight-app-60304a0e-cd5c-4341-a1c7-6fb03b20eefb"
-            data-elfsight-app-lazy
-            data-testid="elfsight-reviews"
-          ></div>
+          <ElfsightWidget appId="60304a0e-cd5c-4341-a1c7-6fb03b20eefb" className="w-full" />
 
           <div className="text-center mt-12">
             <a href={GOOGLE_REVIEWS} target="_blank" rel="noreferrer" data-testid="all-reviews-link"
@@ -289,7 +341,15 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 md:px-10">
           <div className="bg-forest text-white rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
-              <img src={IMG.life1} alt="" className="w-full h-full object-cover" />
+              <Image
+                src={IMG.life1}
+                alt=""
+                fill
+                quality={60}
+                loading="lazy"
+                sizes="100vw"
+                className="object-cover"
+              />
             </div>
             <div className="relative">
               <p className="overline mb-5 !text-sand">Le premier pas ne coûte rien</p>

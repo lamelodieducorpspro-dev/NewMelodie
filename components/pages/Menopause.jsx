@@ -15,6 +15,7 @@ export default function Menopause() {
       <ThematicPage
       title="Ménopause : retrouver énergie, confort et sérénité naturellement"
       heroImg={IMG.menopause}
+      heroAlt="Ménopause et nutrition holistique : accompagnement bienveillant par Apolline à Bouillante, Guadeloupe"
       intro="La ménopause est une transition, pas une maladie. Pourtant, bouffées de chaleur, prise de poids, fatigue, troubles du sommeil… ces symptômes peuvent vraiment impacter la qualité de vie. Mon accompagnement est là pour t'aider à traverser cette transition avec plus de douceur et d'outils concrets."
       h2="Ce que tu vis peut-être en ce moment"
       what={{

@@ -5,7 +5,7 @@ import SEO from "@/components/site/SEO";
 const sections = [
   {
     t: "1. Responsable du traitement",
-    c: ["Apolline Maysounabe — La Mélodie du Corps, Rue des Amandiers, 97125 Bouillante, Guadeloupe. Contact : lamelodieducorps.pro@gmail.com."],
+    c: ["Apolline Maysounabe — La Mélodie du Corps, Rue des Manguiers, 97125 Bouillante, Guadeloupe. Contact : lamelodieducorps.pro@gmail.com."],
   },
   {
     t: "2. Données collectées",

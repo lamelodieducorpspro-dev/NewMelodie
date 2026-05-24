@@ -15,6 +15,7 @@ export default function SOPK() {
       <ThematicPage
       title="SOPK et alimentation : soutenir son équilibre hormonal naturellement"
       heroImg={IMG.sopk}
+      heroAlt="SOPK et alimentation : accompagnement holistique en nutrition par Apolline Maysounabe à Bouillante, Guadeloupe"
       intro="Cycles irréguliers ou absents, acné hormonale, fatigue persistante, fringales intenses, prise de poids difficile à comprendre… Tu n'as pas besoin de t'imposer un régime strict pour commencer à prendre soin de ton équilibre hormonal."
       h2="Le SOPK ne se résume pas aux ovaires"
       what={{

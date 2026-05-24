@@ -6,7 +6,7 @@ const redirects = async () => [
   { source: "/specialites/menopause", destination: "/menopause-alimentation-guadeloupe", permanent: true },
   { source: "/accompagnement", destination: "/mon-accompagnement", permanent: true },
   { source: "/yoga", destination: "/cours-yoga-bouillante-guadeloupe", permanent: true },
-  // Legacy Wix-style URLs
+  // Legacy Wix-style URLs (accents handled via middleware too)
   { source: "/mentions-légales", destination: "/mentions-legales", permanent: true },
   { source: "/à-propos", destination: "/a-propos", permanent: true },
   { source: "/apropos", destination: "/a-propos", permanent: true },
@@ -27,9 +27,32 @@ const redirects = async () => [
   { source: "/contact-fr", destination: "/contact", permanent: true },
 ];
 
+const securityHeaders = [
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+];
+
 const nextConfig = {
   output: "standalone",
-  images: { unoptimized: true },
+  poweredByHeader: false,
+  compress: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000, // 1 year
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    remotePatterns: [
+      { protocol: "https", hostname: "static.wixstatic.com" },
+      { protocol: "https", hostname: "customer-assets.emergentagent.com" },
+      { protocol: "https", hostname: "www.lamelodieducorps.com" },
+      { protocol: "https", hostname: "lamelodieducorps.com" },
+      { protocol: "https", hostname: "elfsightcdn.com" },
+      { protocol: "https", hostname: "static.elfsight.com" },
+    ],
+  },
   experimental: {
     serverComponentsExternalPackages: ["mongodb"],
   },
@@ -46,12 +69,16 @@ const nextConfig = {
       {
         source: "/(.*)",
         headers: [
-          { key: "X-Frame-Options", value: "ALLOWALL" },
-          { key: "Content-Security-Policy", value: "frame-ancestors *;" },
+          ...securityHeaders,
           { key: "Access-Control-Allow-Origin", value: process.env.CORS_ORIGINS || "*" },
           { key: "Access-Control-Allow-Methods", value: "GET, POST, PUT, DELETE, OPTIONS" },
           { key: "Access-Control-Allow-Headers", value: "*" },
         ],
+      },
+      {
+        // Long-term cache for static images
+        source: "/images/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
     ];
   },
