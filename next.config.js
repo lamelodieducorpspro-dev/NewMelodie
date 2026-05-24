@@ -28,11 +28,13 @@ const redirects = async () => [
 ];
 
 const securityHeaders = [
-  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  // X-Frame-Options ALLOWALL pour permettre la preview Emergent dans l'iframe.
+  // La sécurité est gérée par Content-Security-Policy frame-ancestors plus bas.
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+  { key: "Content-Security-Policy", value: "frame-ancestors *;" },
 ];
 
 const nextConfig = {
