@@ -107,7 +107,7 @@ export default function APropos() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5">
-            <img src={IMG.life1} alt="" className="rounded-[2rem] w-full object-cover" />
+            <img src={IMG.life3} alt="Apolline en méditation au coucher du soleil sur l'océan en Guadeloupe — moment de reconnexion à soi" loading="lazy" className="rounded-[2rem] w-full object-cover" />
           </div>
           <div className="md:col-span-7">
             <h2 className="font-serif text-3xl md:text-4xl text-forest mb-6">La Guadeloupe comme terrain de vie</h2>

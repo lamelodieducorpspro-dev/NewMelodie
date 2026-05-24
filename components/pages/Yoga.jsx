@@ -78,7 +78,7 @@ export default function Yoga() {
         <div className="max-w-6xl mx-auto px-6 md:px-10">
           <h2 className="font-serif text-3xl md:text-4xl text-forest mb-12 text-center">Pourquoi intégrer le yoga dans ta vie ?</h2>
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <img src={IMG.life3} alt="" className="rounded-[2rem] w-full object-cover" />
+            <img src={IMG.yoga} alt="Cours de yoga à Bouillante, Guadeloupe — séance Yin et Kundalini Yoga sous l'arbre de vie au Yoga'Niti Studio" loading="lazy" className="rounded-[2rem] w-full object-cover" />
             <div className="space-y-4 text-[#4A5D54] leading-relaxed">
               <p>
                 Le stress chronique, la charge mentale et la déconnexion au corps peuvent avoir un impact
