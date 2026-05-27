@@ -72,12 +72,7 @@ const nextConfig = {
     return [
       {
         source: "/(.*)",
-        headers: [
-          ...securityHeaders,
-          { key: "Access-Control-Allow-Origin", value: process.env.CORS_ORIGINS || "*" },
-          { key: "Access-Control-Allow-Methods", value: "GET, POST, PUT, DELETE, OPTIONS" },
-          { key: "Access-Control-Allow-Headers", value: "*" },
-        ],
+        headers: securityHeaders,
       },
       {
         // Long-term cache for static images

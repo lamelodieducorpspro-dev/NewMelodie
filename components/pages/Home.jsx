@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Star, ArrowRight, Sparkles, Heart, Moon, Brain, Eye, Leaf, MapPin, Phone, Laptop } from "lucide-react";
 import { IMG, TESTIMONIALS, WHATSAPP_LINK, WHATSAPP_DISPLAY, ADDRESS, GOOGLE_REVIEWS } from "@/lib/constants";
-import SEO from "@/components/site/SEO";
 import ElfsightWidget from "@/components/site/ElfsightWidget";
 
 const symptoms = [
@@ -45,11 +44,6 @@ const steps = [
 export default function Home() {
   return (
     <>
-      <SEO
-        title="La Mélodie du Corps · Nutrition Holistique & Santé Féminine · Guadeloupe"
-        description="Apolline accompagne les femmes en nutrition holistique et santé hormonale féminine à Bouillante, Guadeloupe et à distance. SOPK, endométriose, ménopause, fatigue. Appel découverte gratuit."
-        canonical="https://www.lamelodieducorps.com/"
-      />
       {/* HERO */}
       <section data-testid="hero-section" className="relative pt-28 pb-16 md:pt-44 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10">
@@ -83,7 +77,7 @@ export default function Home() {
                 <div className="flex items-center gap-1 mb-1">
                   {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-terracotta text-terracotta" />)}
                 </div>
-                <p className="text-xs text-[#1A2421] font-medium">7 avis · 5/5 sur Google</p>
+                <p className="text-xs text-[#1A2421] font-medium">8 avis · 5/5 sur Google</p>
               </div>
             </div>
 
@@ -129,7 +123,7 @@ export default function Home() {
                 <div className="flex items-center gap-1 mb-2">
                   {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-terracotta text-terracotta" />)}
                 </div>
-                <p className="text-sm text-[#1A2421] font-medium">7 avis · 5/5 sur Google</p>
+                <p className="text-sm text-[#1A2421] font-medium">8 avis · 5/5 sur Google</p>
                 <p className="text-xs text-[#4A5D54] mt-1">Écoute, bienveillance, professionnalisme</p>
               </div>
             </div>
@@ -320,7 +314,7 @@ export default function Home() {
             </h2>
             <div className="flex items-center justify-center gap-1 mt-5">
               {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-terracotta text-terracotta" />)}
-              <span className="ml-2 text-sm text-[#4A5D54]">7 avis · 5/5 sur Google</span>
+              <span className="ml-2 text-sm text-[#4A5D54]">8 avis · 5/5 sur Google</span>
             </div>
           </div>
 

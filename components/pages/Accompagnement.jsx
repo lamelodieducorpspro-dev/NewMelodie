@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { ArrowRight, Check, MapPin, Car, Laptop, Sparkles, Heart, Moon, Brain, Leaf, Wind } from "lucide-react";
 import { IMG } from "@/lib/constants";
-import SEO from "@/components/site/SEO";
 
 const pourQui = [
   "Souffre de SOPK, d'endométriose ou de troubles du cycle",
@@ -27,11 +26,6 @@ const leviers = [
 export default function Accompagnement() {
   return (
     <>
-      <SEO
-        title="Accompagnement nutrition holistique Guadeloupe · Apolline"
-        description="Praticienne en nutrition holistique à Bouillante : SOPK, endométriose, ménopause, fatigue. Suivi personnalisé cabinet, domicile ou visio. Appel découverte gratuit."
-        canonical="https://www.lamelodieducorps.com/accompagnement"
-      />
       <section className="pt-32 pb-16 md:pt-44 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">

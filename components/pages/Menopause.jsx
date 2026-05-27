@@ -2,16 +2,10 @@
 
 import ThematicPage from "@/components/site/ThematicPage";
 import { IMG } from "@/lib/constants";
-import SEO from "@/components/site/SEO";
 
 export default function Menopause() {
   return (
     <>
-      <SEO
-        title="Ménopause et alimentation : retrouver énergie et sérénité · Guadeloupe"
-        description="Accompagnement en nutrition holistique pour mieux vivre la ménopause et la périménopause. Bouffées de chaleur, fatigue, prise de poids. Bouillante et visio."
-        canonical="https://www.lamelodieducorps.com/menopause-alimentation-guadeloupe"
-      />
       <ThematicPage
       title="Ménopause : retrouver énergie, confort et sérénité naturellement"
       heroImg={IMG.menopause}

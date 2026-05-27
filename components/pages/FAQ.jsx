@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Plus, Minus, ArrowRight } from "lucide-react";
-import SEO from "@/components/site/SEO";
 import StructuredData from "@/components/site/StructuredData";
 
 const categories = [
@@ -67,11 +66,6 @@ export default function FAQ() {
 
   return (
     <>
-      <SEO
-        title="FAQ nutrition holistique : SOPK, endométriose, ménopause · Apolline"
-        description="Réponses aux questions fréquentes sur la nutrition holistique, l'accompagnement SOPK/endométriose/ménopause et les cours de yoga. Tout savoir avant ton RDV."
-        canonical="https://www.lamelodieducorps.com/faq"
-      />
       <StructuredData data={faqSchema} id="faq-schema" />
       <section className="pt-32 pb-16 md:pt-44">
         <div className="max-w-4xl mx-auto px-6 md:px-10 text-center">

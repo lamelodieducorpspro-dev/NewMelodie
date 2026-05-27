@@ -1,5 +1,6 @@
 import "./globals.css";
 import Layout from "@/components/site/Layout";
+import SkipToContent from "@/components/site/SkipToContent";
 import StructuredData from "@/components/site/StructuredData";
 import { localBusinessJsonLd, websiteJsonLd, SITE_BASE_URL, OG_IMAGE } from "@/lib/seo";
 
@@ -7,7 +8,7 @@ export const metadata = {
   metadataBase: new URL(SITE_BASE_URL),
   title: {
     default:
-      "La Mélodie du Corps · Nutrition Holistique & Santé Féminine à Bouillante, Guadeloupe",
+      "Nutrition holistique Guadeloupe · Santé féminine & hormones",
     template: "%s · La Mélodie du Corps",
   },
   description:

@@ -3,16 +3,10 @@
 import Link from "next/link";
 import { Calendar, MapPin, ArrowRight, Check } from "lucide-react";
 import { IMG, WHATSAPP_LINK, WHATSAPP_DISPLAY } from "@/lib/constants";
-import SEO from "@/components/site/SEO";
 
 export default function Yoga() {
   return (
     <>
-      <SEO
-        title="Cours de Yoga à Bouillante, Guadeloupe · Yin & Kundalini"
-        description="Cours hebdomadaires de Yin Yoga (mercredi 18h) et Kundalini Yoga (lundi 18h) au Yoga'Niti Studio à Bouillante, Guadeloupe. Tous niveaux. À partir de 12€."
-        canonical="https://www.lamelodieducorps.com/yoga"
-      />
       <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <img src={IMG.yoga} alt="Cours de yoga à Bouillante, Guadeloupe — méditation et bien-être" loading="eager" className="w-full h-full object-cover opacity-30" />

@@ -2,16 +2,10 @@
 
 import ThematicPage from "@/components/site/ThematicPage";
 import { IMG } from "@/lib/constants";
-import SEO from "@/components/site/SEO";
 
 export default function Endometriose() {
   return (
     <>
-      <SEO
-        title="Endométriose et alimentation anti-inflammatoire · Guadeloupe"
-        description="Accompagnement holistique pour mieux vivre l'endométriose : alimentation anti-inflammatoire, digestion, fatigue chronique. À Bouillante et à distance."
-        canonical="https://www.lamelodieducorps.com/endometriose-alimentation-guadeloupe"
-      />
       <ThematicPage
       title="Endométriose et alimentation : accompagner son corps avec douceur"
       heroImg={IMG.endo}

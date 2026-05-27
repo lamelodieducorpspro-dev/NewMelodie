@@ -3,16 +3,10 @@
 import Link from "next/link";
 import { ArrowRight, GraduationCap, Sun, Moon, BookOpen, Star } from "lucide-react";
 import { IMG, TESTIMONIALS } from "@/lib/constants";
-import SEO from "@/components/site/SEO";
 
 export default function APropos() {
   return (
     <>
-      <SEO
-        title="Apolline Maysounabe · Praticienne nutrition holistique Guadeloupe"
-        description="Ingénieure devenue praticienne en nutrition holistique certifiée Hygie Pro et professeure de yoga à Bouillante. Mon parcours, ma vision, mes engagements."
-        canonical="https://www.lamelodieducorps.com/a-propos"
-      />
       <section className="pt-32 pb-20 md:pt-44">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
